@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The PokéDex Archive - The Poké-Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Kriteria 1 & 2: Skip to Main Content Link -->
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <h1>The PokéDex Archive</h1>
+            <p class="subtitle">Hall of Fame &amp; Fan Favorites</p>
+        </div>
+
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home: Kanto</a></li>
+                <li><a href="starters.html">Starter Trio</a></li>
+                <li><a href="gallery.html" class="active" aria-current="page">Poké-Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section">
+            <h2>Kanto Fan-Favorite Gallery</h2>
+            <p>
+                Beyond the starter trio, the Kanto region is home to some of the most famous
+                and powerful Pokémon in anime history. Hover over any Pokémon below to inspect
+                their archive card!
+            </p>
+
+            <!-- Imej Utama Halaman 3 (kantomap.webp Berbentuk Segi Empat Sama) -->
+            <div class="featured-image-wrapper map-container">
+                <img src="images/kantomap.webp"
+                    alt="Colorful vector map of the Kanto region showing numbered routes, cities, and oceans with stylized retro game aesthetics"
+                    class="kanto-map-img">
+            </div>
+        </section>
+
+        <!-- Kriteria 5: CSS Grid Parent Element (Siri Gambar minimum 5 imej) -->
+        <section class="gallery-section">
+            <h2>Featured PokéDex Entries</h2>
+
+            <div class="grid-gallery">
+                <!-- Imej 1 Galeri (Keseluruhan imej ke-2 di halaman) -->
+                <figure class="gallery-item">
+                    <img src="images/pikachu.png" alt="Pikachu smiling with electric sparks on its cheeks">
+                    <figcaption>
+                        <strong>#025 Pikachu</strong> — Electric Type. The iconic mascot known for its Thunderbolt
+                        attack.
+                    </figcaption>
+                </figure>
+
+                <!-- Imej 2 Galeri (Keseluruhan imej ke-3 di halaman) -->
+                <figure class="gallery-item">
+                    <img src="images/eevee.png" alt="Eevee, a brown fox-like Pokémon with a fluffy cream collar">
+                    <figcaption>
+                        <strong>#133 Eevee</strong> — Normal Type. Possesses unstable genetic code allowing multiple
+                        evolutions.
+                    </figcaption>
+                </figure>
+
+                <!-- Imej 3 Galeri (Keseluruhan imej ke-4 di halaman) -->
+                <figure class="gallery-item">
+                    <img src="images/snorlax.png" alt="Snorlax, a giant sleeping blue-green Pokémon">
+                    <figcaption>
+                        <strong>#143 Snorlax</strong> — Normal Type. Spend its days eating and sleeping freely.
+                    </figcaption>
+                </figure>
+
+                <!-- Imej 4 Galeri (Keseluruhan imej ke-5 di halaman) -->
+                <figure class="gallery-item">
+                    <img src="images/gengar.png" alt="Gengar grinning mischievously with red eyes">
+                    <figcaption>
+                        <strong>#094 Gengar</strong> — Ghost / Poison Type. Hides in shadows and drops the room
+                        temperature.
+                    </figcaption>
+                </figure>
+
+                <!-- Imej 5 Galeri (Keseluruhan imej ke-6 di halaman) -->
+                <figure class="gallery-item">
+                    <img src="images/mewtwo.png" alt="Mewtwo standing in a powerful psychic battle stance">
+                    <figcaption>
+                        <strong>#150 Mewtwo</strong> — Psychic Type. A legendary Pokémon created by genetic
+                        manipulation.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 The PokéDex Archive | Created for Coursera Introduction to CSS3 Final Project.</p>
+        <p class="disclaimer">All Pokémon images and characters are properties of Nintendo, Game Freak, and The Pokémon
+            Company. Used for educational purposes only.</p>
+    </footer>
+
+</body>
+
+</html>

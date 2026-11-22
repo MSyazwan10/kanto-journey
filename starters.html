@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The PokéDex Archive - The Starter Trio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Kriteria 1 & 2: Skip to Main Content Link -->
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <h1>The PokéDex Archive</h1>
+            <p class="subtitle">Choose Your First Partner Pokémon</p>
+        </div>
+
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home: Kanto</a></li>
+                <li><a href="starters.html" class="active" aria-current="page">Starter Trio</a></li>
+                <li><a href="gallery.html">Poké-Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section">
+            <h2>Professor Oak's Starter Trio</h2>
+            <p>
+                Before leaving Pallet Town, every trainer must choose one of these three iconic
+                partner Pokémon. Each partner brings unique strengths and elemental mastery to your team.
+            </p>
+
+            <!-- Imej Utama Halaman 2 -->
+            <div class="featured-image-wrapper">
+                <img src="images/starter-banner.jpg" alt="Banner showcasing the Pokémon Research Lab and Pokéballs"
+                    class="featured-img">
+            </div>
+        </section>
+
+        <!-- Kriteria 6 & 8: Flexbox Parent Element & nth-child Selector -->
+        <section class="starters-section">
+            <h2>Select Your Partner</h2>
+            <div class="flex-container">
+
+                <!-- Kad 1: Ganjil (Odd) -->
+                <article class="poke-card">
+                    <img src="images/bulbasaur.png" alt="Bulbasaur, the Grass and Poison type Seed Pokémon">
+                    <h3>#001 Bulbasaur</h3>
+                    <span class="type-badge grass">Grass / Poison</span>
+                    <p>A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.
+                    </p>
+                </article>
+
+                <!-- Kad 2: Genap (Even - Digayakan berbeza melalui :nth-child) -->
+                <article class="poke-card">
+                    <img src="images/charmander.png"
+                        alt="Charmander, the Fire type Lizard Pokémon with a flame on its tail">
+                    <h3>#004 Charmander</h3>
+                    <span class="type-badge fire">Fire</span>
+                    <p>Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.</p>
+                </article>
+
+                <!-- Kad 3: Ganjil (Odd) -->
+                <article class="poke-card">
+                    <img src="images/squirtle.png" alt="Squirtle, the Water type Tiny Turtle Pokémon">
+                    <h3>#007 Squirtle</h3>
+                    <span class="type-badge water">Water</span>
+                    <p>After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.</p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 The PokéDex Archive | Created for Coursera Introduction to CSS3 Final Project.</p>
+        <p class="disclaimer">All Pokémon images and characters are properties of Nintendo, Game Freak, and The Pokémon
+            Company. Used for educational purposes only.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The PokéDex Archive - Welcome to Kanto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Kriteria 1 & 2: Skip to Main Content Link (Visible on Focus) -->
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <h1>The PokéDex Archive</h1>
+            <p class="subtitle">Your Ultimate Guide to the Kanto Region</p>
+        </div>
+
+        <!-- Kriteria 3 & 6: Accessible & Attractively Styled Navigation using Flexbox -->
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html" class="active" aria-current="page">Home: Kanto</a></li>
+                <li><a href="starters.html">Starter Trio</a></li>
+                <li><a href="gallery.html">Poké-Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section">
+            <h2>Welcome to the World of Pokémon!</h2>
+            <p>
+                Step into the iconic Kanto region, where every legendary trainer begins their journey.
+                Guided by the research of Professor Oak in Pallet Town, trainers set out to explore
+                diverse habitats, build lifelong friendships with their partner Pokémon, and complete
+                the PokéDex.
+            </p>
+
+            <!-- Imej Utama Halaman 1 (Dihias dengan Box Model) -->
+            <div class="featured-image-wrapper">
+                <img src="images/startertrio.png"
+                    alt="Kanto Region Pokémon starters gathered together in an adventure landscape"
+                    class="featured-img">
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>How Your Journey Begins</h2>
+            <p>
+                At age ten, aspiring Pokémon Trainers receive their very first partner Pokémon from
+                Professor Oak's Laboratory. Whether you prefer the resilience of Grass-types, the
+                fierce determination of Fire-types, or the steady composure of Water-types, your
+                choice shapes the battles ahead.
+            </p>
+            <div class="cta-container">
+                <a href="starters.html" class="cta-button">Meet the Starter Trio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 The PokéDex Archive | Created for Coursera Introduction to CSS3 Final Project.</p>
+        <p class="disclaimer">All Pokémon images and characters are properties of Nintendo, Game Freak, and The Pokémon
+            Company. Used for educational purposes only.</p>
+    </footer>
+
+</body>
+
+</html>

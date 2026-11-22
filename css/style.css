@@ -1,0 +1,367 @@
+/* ==========================================================================
+   1. TETAPAN ASAS & KONTRAS WARNA TINGGI (WAVE ACCESSIBILITY COMPLIANT)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8F9FA;
+    /* Latar belakang putih bersih */
+    color: #1A1A1A;
+    /* Teks hitam gelap untuk kontras maksimum (>4.5:1) */
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 0.75rem;
+    color: #111111;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+/* ==========================================================================
+   2. KRITERIA 2: "SKIP TO MAIN CONTENT" LINK (POSITION & :FOCUS)
+   ========================================================================== */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    /* Sembunyikan di luar skrin secara lalai */
+    left: 20px;
+    background-color: #FFCB05;
+    /* Kuning Pokémon */
+    color: #111111;
+    /* Teks gelap (Kontras tinggi) */
+    padding: 12px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid #1D2C5E;
+    border-radius: 8px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 15px;
+    /* Muncul apabila Tab ditekan */
+    outline: 3px dashed #B71C1C;
+}
+
+/* ==========================================================================
+   3. KRITERIA 3 & 6: HEADER & NAVIGATION BAR (FLEXBOX)
+   ========================================================================== */
+.site-header {
+    background-color: #B71C1C;
+    /* Merah PokéDex (Kontras tinggi dengan teks putih) */
+    color: #FFFFFF;
+    border-bottom: 6px solid #1A1A1A;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.site-header h1 {
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #FFEB3B;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Penerapan Flexbox pada Bar Navigasi */
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style-type: none;
+    background-color: #1A1A1A;
+    padding: 1rem;
+}
+
+.nav-list a {
+    color: #FFFFFF;
+    background-color: #2C2C2C;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 22px;
+    border-radius: 25px;
+    border: 2px solid #FFFFFF;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Kriteria 7: Hover Pseudo-Class & Transitions */
+.nav-list a:hover,
+.nav-list a:focus {
+    background-color: #FFCB05;
+    /* Kuning Pikachu */
+    color: #111111;
+    border-color: #FFCB05;
+    transform: translateY(-3px);
+}
+
+.nav-list a.active {
+    background-color: #FFCB05;
+    color: #111111;
+    border-color: #FFFFFF;
+}
+
+/* ==========================================================================
+   4. KRITERIA 4: BOX MODEL UNTUK SEMUA IMEJ (Border, Padding, Border-Radius)
+   ========================================================================== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* Elemen Wajib Box Model */
+    border: 4px solid #1D2C5E;
+    padding: 10px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Kriteria 7: Hover Effect pada Imej Biasa */
+img:hover {
+    transform: scale(1.04) rotate(1deg);
+    border-color: #B71C1C;
+    box-shadow: 0 8px 20px rgba(183, 28, 28, 0.25);
+}
+
+.featured-image-wrapper {
+    margin: 1.5rem 0;
+}
+
+.featured-img {
+    max-height: 420px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* ==========================================================================
+   GAYA KHAS KANTO MAP (Membantu memaparkan kantomap.webp dengan cantik)
+   ========================================================================== */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.kanto-map-img {
+    max-width: 100%;
+    width: 550px;
+    /* Saiz ideal untuk peta 1:1 */
+    height: auto;
+    object-fit: contain;
+    /* Box Model Khusus Peta Kanto */
+    border: 6px double #1D2C5E;
+    /* Sempadan berkembar gaya retro */
+    padding: 12px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.kanto-map-img:hover {
+    transform: scale(1.03);
+    /* Zum sedikit sahaja untuk mengekalkan kejelasan perincian peta */
+    border-color: #B71C1C;
+    /* Bertukar warna merah PokéDex apabila disentuh */
+}
+
+/* ==========================================================================
+   5. CONTAINER SEKSYEN & BUTTON CTA
+   ========================================================================== */
+.hero-section,
+.info-section,
+.starters-section,
+.gallery-section {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    border: 2px solid #E0E0E0;
+}
+
+.cta-container {
+    margin-top: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #1D2C5E;
+    color: #FFFFFF;
+    padding: 12px 28px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #1D2C5E;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #B71C1C;
+    border-color: #B71C1C;
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   6. KRITERIA 6 & 8: HALAMAN FLEXBOX & PEMILIH :NTH-CHILD (starters.html)
+   ========================================================================== */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.poke-card {
+    flex: 1 1 280px;
+    background-color: #F1F5F9;
+    border: 3px solid #1D2C5E;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.poke-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* Kriteria 8: Penggunaan Pemilih :nth-child untuk memberikan gaya berselang-seli */
+.flex-container .poke-card:nth-child(odd) img {
+    border-radius: 50%;
+    /* Bulat penuh untuk Bulbasaur (1) dan Squirtle (3) */
+    border-color: #1B5E20;
+    background-color: #E8F5E9;
+}
+
+.flex-container .poke-card:nth-child(even) {
+    background-color: #FFF8E1;
+    /* Latar belakang kuning lembut untuk Charmander (2) */
+    border-color: #B71C1C;
+}
+
+.flex-container .poke-card:nth-child(even) img {
+    border-radius: 35px 8px 35px 8px;
+    /* Bentuk daun/api unik */
+    border-color: #B71C1C;
+    background-color: #FFEBEE;
+}
+
+/* Lencana Jenis Pokémon (Kontras Tinggi) */
+.type-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 0.75rem;
+}
+
+.type-badge.grass {
+    background-color: #1B5E20;
+}
+
+.type-badge.fire {
+    background-color: #B71C1C;
+}
+
+.type-badge.water {
+    background-color: #0D47A1;
+}
+
+/* ==========================================================================
+   7. KRITERIA 5 & 8: HALAMAN CSS GRID (gallery.html)
+   ========================================================================== */
+.grid-gallery {
+    display: grid;
+    /* 3 lajur pada skrin besar, responsif pada skrin kecil */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-item {
+    background-color: #F8F9FA;
+    border: 2px solid #CCCCCC;
+    border-radius: 14px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* Penggunaan :nth-child tambahan di galeri untuk visual menarik */
+.grid-gallery .gallery-item:nth-child(even) img {
+    border-radius: 40px 10px 40px 10px;
+    border-style: dashed;
+}
+
+.grid-gallery .gallery-item:nth-child(odd) img {
+    border-radius: 20px;
+    border-style: solid;
+}
+
+figcaption {
+    font-size: 0.95rem;
+    color: #1A1A1A;
+}
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
+.site-footer {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top: 5px solid #B71C1C;
+}
+
+.site-footer p {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    color: #E0E0E0;
+}
